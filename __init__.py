@@ -8,7 +8,7 @@ class RosTwoFoxyGazebo(MycroftSkill):
     @intent_file_handler('gazebo.foxy.two.ros.intent')
     def handle_gazebo_foxy_two_ros(self, message):
         self.speak_dialog('gazebo.foxy.two.ros')
-        subprocess.call([". /opt/ros/foxy/setup.bash"],shell=True)
+        subprocess.call(["source /opt/ros/foxy/setup.bash"],shell=True)
         subprocess.call([". ~/ros2_foxy/install/setup.bash"],shell=True)
         subprocess.call(["gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world"],shell=True)
 
