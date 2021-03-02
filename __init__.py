@@ -15,7 +15,7 @@ class RosTwoFoxyGazebo(MycroftSkill):
         #ros1 for testing
         subprocess.call(["source /opt/ros/noetic/setup.bash"],shell=True)
         subprocess.call(["source ~/catkin_ws/devel/setup.bash"],shell=True)
-        subprocess.call(["roscore & rosrun gazebo_ros gazebo"],shell=True)
+        subprocess.call(["roscore & roslaunch gazebo_ros empty_world.launch"],shell=True)
 
         
 def create_skill():
