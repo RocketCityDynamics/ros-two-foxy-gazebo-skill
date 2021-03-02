@@ -10,7 +10,7 @@ class RosTwoFoxyGazebo(MycroftSkill):
         self.speak_dialog('gazebo.foxy.two.ros')
         subprocess.call(["source /opt/ros/foxy/setup.bash"],shell=True)
         subprocess.call([". ~/ros2_foxy/install/setup.bash"],shell=True)
-        subprocess.call(["gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world"],shell=True)
+        subprocess.call(["gazebo /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world"],shell=True)
 
 def create_skill():
     return RosTwoFoxyGazebo()
